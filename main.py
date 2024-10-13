@@ -18,6 +18,5 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    load_dotenv(dotenv_path=".env")
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
