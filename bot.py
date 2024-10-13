@@ -11,7 +11,7 @@ dp = Dispatcher()
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
     greetings = "Привет! Напиши мне название города, и я расскажу, какая сейчас в нем погода!"
-    message.answer(greetings)
+    await message.answer(greetings)
 
 
 @dp.message()
