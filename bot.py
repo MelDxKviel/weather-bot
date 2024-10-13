@@ -10,7 +10,7 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    greetings = ""
+    greetings = "Привет! Напиши мне название города, и я расскажу, какая сейчас в нем погода!"
     message.answer(greetings)
 
 
@@ -26,6 +26,6 @@ async def city_handler(message: Message) -> None:
 💧 Влажность воздуха {weather_data["humidity"]}%
     """
     except CityNotFoundException:
-        answer = "Город не найден, попробуйте ещё раз"
+        answer = "Город не найден, попробуй ещё раз"
     finally:
         await message.answer(answer)
