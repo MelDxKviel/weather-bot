@@ -16,7 +16,7 @@ async def get_current_weather_by_city(city: str) -> dict:
     city = city.strip().lower()
 
     params = {
-        "q": city.lower(),
+        "q": city,
         "lang": "ru",
         "units": "metric",
         "appid": OW_API_KEY,
